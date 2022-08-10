@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/profileLabel"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:gravity="center"
+        android:text="Profile"
+        android:textColor="@color/textTabBright"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/userLabel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userLabel"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:gravity="center"
+        android:text="AllUsers"
+        android:textColor="@color/textTabNight"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/notificationsLabel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/profileLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/notificationsLabel"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:gravity="center"
+        android:text="Notifications"
+        android:textColor="@color/textTabNight"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/userLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/mainPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userLabel" />
+</androidx.constraintlayout.widget.ConstraintLayout>
